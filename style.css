@@ -1,0 +1,180 @@
+/* Custom CSS for Nomad Brew */
+
+/* Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px; /* Adjust for fixed navbar height */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(33, 37, 41, 0.95); /* Dark background with slight transparency */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #fff;
+    border-bottom: 2px solid #007bff; /* Highlight active/hovered link */
+    padding-bottom: 3px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080/4682b4/ffffff?text=Productive+Coffee+Shop') no-repeat center center/cover;
+    height: 75vh; /* viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .display-3 {
+    font-size: 4.5rem;
+}
+
+.hero-section .lead {
+    font-size: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #007bff;
+}
+
+/* Features Section */
+#features .feature-card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#features .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+#features .feature-card .card-body i {
+    color: #007bff; /* Primary color for icons */
+}
+
+/* Spaces and Menu Sections (General Card Styling) */
+.menu-card, .event-card {
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover, .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+.menu-card img {
+    object-fit: cover;
+    height: 200px;
+}
+
+/* Map Responsive Embed */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: #212529; /* Darker than navbar for distinction */
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #007bff !important; /* Primary color on hover for links */
+}
+
+/* Utility Classes */
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(33, 37, 41, 0.98);
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 10px 0;
+    }
+    .navbar-nav .nav-link {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: none !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section .display-3 {
+        font-size: 3rem;
+    }
+    .hero-section .lead {
+        font-size: 1.2rem;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .map-responsive {
+        padding-bottom: 75%; /* More square on smaller screens */
+    }
+}
